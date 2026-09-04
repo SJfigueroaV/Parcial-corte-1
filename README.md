@@ -8,6 +8,8 @@ Diseño de Software.
 
 ```
 FDS_Evaluacion_Corte1/
+├── Parte1_2_y_3/
+│   └── Documento parcial. Diseño .pdf  # Documento escrito de las partes 1, 2 y 3
 ├── Parte3_AnalisisCodigo/
 │   └── ProcesadorRendimiento.java # Código corregido: bucle y cálculo del promedio
 ├── Parte4_UML/
