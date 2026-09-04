@@ -8,8 +8,7 @@ de la evaluación de Fundamentos de Diseño de Software.
 ```
 FDS_Evaluacion_Corte1/
 ├── Parte4_UML/
-│   ├── clinica_veterinaria.puml   # Código fuente del diagrama (PlantUML)
-│   └── ClinicaVeterinaria.png     # Diagrama de clases renderizado
+│   └── DIAGRAMA_PARCIAL.jpeg      # Diagrama de clases de la clínica veterinaria
 └── Parte5_Java/
     ├── src/
     │   ├── IRastreable.java       # Interfaz: consultarUbicacion()
@@ -19,22 +18,12 @@ FDS_Evaluacion_Corte1/
     └── out/                       # .class compilados
 ```
 
-## Parte 4 — Decisiones de modelado
+## Parte 4 — Modelado UML
 
-- **Composición (◆) Mascota → HistorialClinico (1 a 1):** el historial se crea
-  en el constructor de `Mascota` y se destruye con ella (rombo negro del lado
-  del todo).
-- **Agregación (◇) Mascota → Veterinario (0..* a 1):** el veterinario se
-  inyecta desde el exterior, sobrevive a la mascota y puede reasignarse
-  (rombo blanco del lado del todo).
-- **Herencia (△):** `Perro` y `Gato` extienden `Mascota`.
-- **Implementación (..▷):** `Perro` y `Gato` implementan `IVacunable`.
-- Visibilidades: atributos privados (`-`), operaciones públicas (`+`).
-
-Para regenerar el PNG:
-```bash
-java -jar plantuml.jar -Playout=smetana clinica_veterinaria.puml
-```
+El diagrama de clases de la clínica veterinaria está en
+`Parte4_UML/DIAGRAMA_PARCIAL.jpeg`. Incluye las clases `Mascota`,
+`HistorialClinico`, `Veterinario`, `Perro`, `Gato` y la interfaz
+`IVacunable`, con composición, agregación, herencia e implementación.
 
 ## Parte 5 — Compilación y ejecución
 
