@@ -1,12 +1,15 @@
 # Evaluación FDS - Corte 1 (Partes 4 y 5)
 
-Solución de la Parte 4 (Modelado UML) y la Parte 5 (Implementación Java SE 11)
-de la evaluación de Fundamentos de Diseño de Software.
+Solución de la Parte 3 (Análisis de código), Parte 4 (Modelado UML) y
+Parte 5 (Implementación Java SE 11) de la evaluación de Fundamentos de
+Diseño de Software.
 
 ## Estructura
 
 ```
 FDS_Evaluacion_Corte1/
+├── Parte3_AnalisisCodigo/
+│   └── ProcesadorRendimiento.java # Código corregido: bucle y cálculo del promedio
 ├── Parte4_UML/
 │   └── DIAGRAMA_PARCIAL.jpeg      # Diagrama de clases de la clínica veterinaria
 └── Parte5_Java/
@@ -17,6 +20,18 @@ FDS_Evaluacion_Corte1/
     │   └── Main.java              # Arreglo polimórfico + for-each
     └── out/                       # .class compilados
 ```
+
+## Parte 3 — Análisis de código
+
+`Parte3_AnalisisCodigo/ProcesadorRendimiento.java` contiene el código
+corregido (punto 9.3):
+
+- El bucle itera hasta `calificaciones.length - 1` (evita el
+  `ArrayIndexOutOfBoundsException` en `i = 4`).
+- El cálculo usa `(double) acumulador / 4` para forzar división real y
+  obtener `82.5` en lugar de `82.0` (división entera).
+
+Salida al ejecutar: `Promedio calculado: 82.5`
 
 ## Parte 4 — Modelado UML
 
