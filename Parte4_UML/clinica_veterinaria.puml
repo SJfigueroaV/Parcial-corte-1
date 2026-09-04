@@ -1,8 +1,4 @@
 @startuml ClinicaVeterinaria
-' =====================================================================
-' PARTE 4 - Modelado UML: Clinica veterinaria
-' Evaluacion Fundamentos de Diseno de Software - Corte 1
-' =====================================================================
 skinparam classAttributeIconSize 0
 title Diagrama de Clases - Clinica Veterinaria
 
@@ -54,18 +50,13 @@ class Gato {
     + consultarEsquemaVacunacion() : String
 }
 
-' --- Relaciones estructurales ---
-' Composicion: el HistorialClinico nace y muere con la Mascota
 HistorialClinico "1" --* "1" Mascota : contiene >
 
-' Agregacion: el Veterinario se inyecta desde afuera y puede reasignarse
 Veterinario "1" --o "0..*" Mascota : atendido por >
 
-' Herencia
 Perro --|> Mascota
 Gato  --|> Mascota
 
-' Implementacion de la interfaz
 Perro ..|> IVacunable
 Gato  ..|> IVacunable
 
